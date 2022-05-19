@@ -1,4 +1,4 @@
-import {  Pets } from "@mui/icons-material";
+
 import {
   AppBar,
   Avatar,
@@ -48,7 +48,7 @@ const Navbar = () => {
           TAMK
               </Typography>
               
-        <Pets sx={{ display: { xs: "block", sm: "none" } }} />
+        
         
         <Icons>
           

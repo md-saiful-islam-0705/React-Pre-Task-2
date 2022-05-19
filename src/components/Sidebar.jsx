@@ -12,6 +12,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import SettingsIcon from '@mui/icons-material/Settings';
 import MenuIcon from '@mui/icons-material/Menu';
 import Avatar from '@mui/material/Avatar';
+import Profile from './pages/Profile'
 
 export default function NestedList() {
   const [open, setOpen] = React.useState(true);
@@ -19,6 +20,12 @@ export default function NestedList() {
   const handleClick = () => {
     setOpen(!open);
   };
+
+  const handleProfile = () => {
+    return (
+      <Profile></Profile>
+    )
+  }
 
   return (
     <List
@@ -44,6 +51,7 @@ export default function NestedList() {
         <ListItemText primary="Home" />
       </ListItemButton>
       <ListItemButton onClick={handleClick}>
+        
         <ListItemIcon>
         <MenuIcon/>
         </ListItemIcon>
@@ -52,7 +60,7 @@ export default function NestedList() {
       </ListItemButton>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-          <ListItemButton sx={{ pl: 4 }}>
+          <ListItemButton onClick={handleProfile} sx={{ pl: 4 }}>
             <ListItemIcon>
             <AccountBoxIcon/>
             </ListItemIcon>

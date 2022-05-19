@@ -2,6 +2,7 @@ import Sidebar from "./components/Sidebar";
 import { Box, createTheme, Stack, ThemeProvider } from "@mui/material";
 import Navbar from "./components/Navbar";
 import { useState } from "react";
+import Home from "./components/pages/Home";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -17,10 +18,11 @@ function App() {
         <Navbar />
         <Stack direction="row" spacing={2} justifyContent="space-between">
         <Sidebar setMode={setMode} mode={mode}/>
-          
         </Stack>
       </Box>
+
     </ThemeProvider>
+    
   );
 }
 
